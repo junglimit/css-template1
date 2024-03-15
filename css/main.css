@@ -364,7 +364,9 @@ section.about ul.sub-container li .text .more::before {
   left: 45%;
   cursor: pointer;
 }
-
+#incruit-btn:hover{
+  background: rgb(174, 81, 0);
+}
 /* sns style */
 
 .sns{
@@ -388,10 +390,16 @@ section.about ul.sub-container li .text .more::before {
   /* padding-right: 10px; */
   /* border: 2px solid #000; */
   height: 235px;
+  
   overflow: hidden;
 }
 .sns .sub-container li .img-box img{
   width: 100%;
+ transition: 0.6s;
+
+}
+.sns .sub-container li:hover .img-box img:hover{
+  transform: scale(1.2);
 }
 .sns .sub-container li .bottom{
   padding: 60px;
@@ -404,7 +412,7 @@ section.about ul.sub-container li .text .more::before {
 }
 .sns .sub-container li a .bottom p{
   font-weight: bold;
-  padding-bottom: ;
+  /* padding-bottom: ; */
 }
 .sns .sub-container li a .bottom .time{
   font-size: 14px;
