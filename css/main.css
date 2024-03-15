@@ -1,5 +1,3 @@
-@import url('../css/common.css');
-
 @import url('common.css');
 
 /* header style */
@@ -10,7 +8,7 @@ header {
   line-height: 100px;
   position: fixed;
   top: 0;
-  z-index: 999999;
+  z-index: 9999;
 }
 header .inner-header {
   /* border: 3px solid tomato; */
@@ -84,56 +82,135 @@ header .inner-header .gnb-mobile {
   display: none;
 }
 
- 
-/* section.main style */
 
-.main{
-  background: url(../img/vis_4.jpg) no-repeat center/cover fixed;
+/* section.main style */
+section.main {
+  background: url('../img/vis_4.jpg') no-repeat center/cover fixed;
   height: 100vh;
   position: relative;
 }
-.main .main-title{
+
+section.main .main-title {
   /* background: red; */
   color: #fff;
   text-align: center;
-  /* box 정중앙에 두기 ,50-50주면 박스 왼쪽 꼭짓점 기준이라 치우침*/
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   text-shadow: 2px 2px 10px #123;
 }
-.main .main-title h2{
+
+section.main .main-title h2 {
   font-size: 55px;
 }
-.main .main-title p{
+section.main .main-title p {
   font-size: 25px;
   margin: 20px 0;
 }
-.main .main-title .view{
+section.main .main-title .view {
   font-size: 15px;
   letter-spacing: 2px;
+  display: block;
   width: 180px;
   margin: 0 auto;
-  display: block;
   border: 1px solid #fff;
   border-radius: 40px;
   padding: 8px 0;
   overflow: hidden;
-  
+
   position: relative;
 }
-.main .main-title .view::after{
+section.main .main-title .view::after {
   content: '';
-  width: 0%;
+  width: 0;
   height: 100%;
   background: rgba(255,255,255, 0.4);
-  /* background-color: red; */
   position: absolute;
   left: 0;
   top: 0;
-  transition: 0.4s;
+  transition: 0.3s;
 }
-.main .main-title .view:hover::after{
+section.main .main-title .view:hover::after {
   width: 100%;
+}
+
+/* section > div.title 공통 style */
+section .title {
+  text-align: center;
+}
+section .title h2 {
+  font-size: 45px;
+  color: #111;
+  margin-bottom: 5px;
+}
+section .title p {
+  font-size: 18px;
+  color: #555;
+}
+
+section .sub-container {
+  /* background: tomato; */
+  width: 74%;
+  margin: 0 auto;
+}
+
+/* section.about style */
+section.about {
+  margin: 80px 0;
+}
+section.about ul.sub-container {
+  /* background: orange; */
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 30px;
+}
+
+section.about ul.sub-container li {
+  /* border: 3px solid #000; */
+  float: left;
+  width: 33.333%;
+  height: 510px;
+}
+
+section.about ul.sub-container li a:hover .img-box img  {
+  transform: scale(1.2);
+}
+section.about ul.sub-container li .img-box {
+  /* border: 3px solid blue; */
+  overflow: hidden;
+}
+section.about ul.sub-container li .img-box img {
+  /* opacity: 0.3; */
+  width: 100%;
+  transition: 0.6s;
+}
+
+section.about ul.sub-container li .text {
+  /* border: 3px solid blue; */
+  padding: 25px;
+}
+section.about ul.sub-container li .text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section.about ul.sub-container li .text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+section.about ul.sub-container li .text .more {
+  /* lowercase : 일괄 소문자 변경 */
+  text-transform: uppercase;
+  font-weight: 700;
+  /* border: 2px solid #000; */
+  position: relative;
+  padding-left: 40px;
+}
+section.about ul.sub-container li .text .more::before {
+  content: '→';
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #ff8342;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: -7px;
 }
