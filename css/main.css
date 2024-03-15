@@ -10,6 +10,7 @@ header {
   line-height: 100px;
   position: fixed;
   top: 0;
+  z-index: 999999;
 }
 header .inner-header {
   /* border: 3px solid tomato; */
@@ -81,4 +82,58 @@ header .inner-header .tnb li:last-child i {
 
 header .inner-header .gnb-mobile {
   display: none;
+}
+
+ 
+/* section.main style */
+
+.main{
+  background: url(../img/vis_4.jpg) no-repeat center/cover fixed;
+  height: 100vh;
+  position: relative;
+}
+.main .main-title{
+  /* background: red; */
+  color: #fff;
+  text-align: center;
+  /* box 정중앙에 두기 ,50-50주면 박스 왼쪽 꼭짓점 기준이라 치우침*/
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  text-shadow: 2px 2px 10px #123;
+}
+.main .main-title h2{
+  font-size: 55px;
+}
+.main .main-title p{
+  font-size: 25px;
+  margin: 20px 0;
+}
+.main .main-title .view{
+  font-size: 15px;
+  letter-spacing: 2px;
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 8px 0;
+  overflow: hidden;
+  
+  position: relative;
+}
+.main .main-title .view::after{
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: rgba(255,255,255, 0.4);
+  /* background-color: red; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.4s;
+}
+.main .main-title .view:hover::after{
+  width: 100%;
 }
